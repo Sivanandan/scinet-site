@@ -248,7 +248,7 @@ tail -5 Arabidopsis.gtf  # View last 5 lines
 
 
 ### 3. GTF Files in Bioinformatics
-A GTF (Gene Transfer Format) is a tab delimited text file. It describes genes and other features, exons, CDS etc.bGTF (Gene Transfer Format) files are essential for describing gene and transcript structures in genome annotation. Below are the most common uses:
+A GTF (Gene Transfer Format) is a tab delimited text file. It describes genes and other features, exons, CDS etc. GTF (Gene Transfer Format) files are essential for describing gene and transcript structures in genome annotation. Here are some of the most common uses:
 
 {% include table content="| Use Case | Description |
 |----------|-------------|
