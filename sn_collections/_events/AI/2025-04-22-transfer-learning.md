@@ -7,7 +7,7 @@ display: basic
 no-caldate: true
 provider: University of Florida
 hideprovider: true
-description: This workshop provides the foundational concepts and practical applications of transfer learning
+description: This workshop provides foundational concepts and practical applications of transfer learning
 
 tags: Artificial-Intelligence Machine-Learning
 
@@ -19,11 +19,15 @@ multiday: April 22, 24
 materials:
   - text: Workshop materials
     url: https://github.com/PracticumAI/transfer_learning
+  - text: Day 1 Recording
+    url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/EabbrNojUy1CtAIVOaxNL9YBEvDjSGF_JTb5qsQuyZ6C2Q?e=DRKbeE
+  - text: Day 2 Recording
+    url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/EXBMpt5cw4xJo-x3rolundQBimPFZvEgOaXgyS6-58uFrQ?e=Pdx23Q
 
 materialsdesc: "Workshop materials available at the links below."
 
 subnav:
-  - title: Tutorial setup instruction
+  - title: Tutorial setup instructions
   - title: Workshop Materials
 
 parent: 
@@ -31,7 +35,7 @@ parent:
   url: /events/2025-ai
 ---
 
-This workshop provides the foundational concepts and practical applications of transfer learning, a powerful technique in deep learning that allows AI models to leverage pre-trained knowledge to improve performance on new tasks. The sessions will cover different types of transfer learning techniques, such as feature extraction and fine-tuning. This includes hands-on experience in applying these techniques to computer vision and language models. <!--excerpt-->
+This workshop provides the foundational concepts and practical applications of transfer learning, a powerful technique in deep learning that allows AI models to leverage pretrained knowledge to improve performance on new tasks. The sessions will cover different types of transfer learning techniques, such as feature extraction and fine-tuning. This includes hands-on experience in applying these techniques to computer vision and language models. <!--excerpt-->
 
 **Prerequisites:**
 * Active SCINet Account
@@ -47,7 +51,7 @@ This workshop provides the foundational concepts and practical applications of t
 * Troubleshoot common challenges in transfer learning, such as catastrophic forgetting and negative transfer.
 
 
-## Tutorial setup instruction
+## Tutorial setup instructions
 
 Steps to prepare for the tutorial:
 
@@ -57,8 +61,9 @@ Steps to prepare for the tutorial:
  
     {:.copy-code}
     ```bash
-srun -A scinet_workshop1 -t 00:30:00 -n 1 --mem 8G --pty bash  
+srun -A scinet_workshop1 -t 00:30:00 -n 1 --mem 8G --pty bash
 ```
+    {% include reservation-alert project="scinet_workshop1" %}
 
 1. **Create your workshop working directory** and copy the tutorial materials into it by running the following commands. Note: you do not have to edit the commands with your username as it will be determined by the `$USER` variable.  
 
@@ -67,44 +72,46 @@ srun -A scinet_workshop1 -t 00:30:00 -n 1 --mem 8G --pty bash
 mkdir -p /90daydata/shared/$USER/transfer_learning
 cd /90daydata/shared/$USER/transfer_learning
 cp -r /project/scinet_workshop1/transfer_learning/*.ipynb .
-cp -r /project/scinet_workshop1/ transfer_learning /*.py .
+cp -r /project/scinet_workshop1/transfer_learning/*.py .
+cp -r /project/scinet_workshop1/transfer_learning/images .
 ``` 
 
-1. **Setup the kernel for JupyterLab.** You will create a kernel called *computer_vision_1_env* to access from JupyterLab Server. Run the following commands to activate the workshop's virtual environment and create a new kernelspec from it: 
+1. **Setup the kernel for JupyterLab.** You will create a kernel called *tl_env* to access from JupyterLab Server. Run the following commands to activate the workshop's virtual environment and create a new kernelspec from it: 
 
     {:.copy-code} 
-    ```bash 
-source /project/scinet_workshop1/ transfer_learning /tl_env/bin/activate 
-ipython kernel install --name "tl_env" --user 
+    ```bash
+source /project/scinet_workshop1/transfer_learning/tl_env/bin/activate
+ipython kernel install --name "tl_env" --user
 ``` 
 
 1. **Stop the interactive job** on the compute node by running the command:
 
      {:.copy-code} 
-    ```bash 
-exit 
+    ```bash
+exit
 ``` 
 
 1. **Launch a JupyterLab Server session.** Under the *Interactive Apps* menu, select *JupyterLab Server*.
   * Specify the following input values on the page:
-      * Account: scinet_workshop1 
-      * Partition: gpu-a100-mig7 
-      * QOS: normal 14-00:00:00 
-      * Number of hours: 4 
-      * Number of nodes: 1 
-      * Number of tasks: 4 
+      * Account: scinet_workshop1
+      * Partition: gpu-a100-mig7
+      * QOS: normal 14-00:00:00
+      * Number of hours: 4
+      * Number of nodes: 1
+      * Number of tasks: 4
       * Additional Slurm Parameters:
   
           {: .copy-code } 
           ``` 
---reservation=workshop --gres=gpu:1 --mem=32G --ntasks-per-node=4 
+--reservation=workshop --gres=gpu:1 --mem=32G --ntasks-per-node=4
 ```
+        {% include reservation-alert reservation="workshop" %}
 
     * Working Directory:  
 
         {: .copy-code } 
         ``` 
-/90daydata/shared/${USER}/transfer_learning 
+/90daydata/shared/${USER}/transfer_learning
 ``` 
 
   * Click *Launch*. The screen will update to the *Interactive Sessions* page. When your Jupyter session is ready, the top card will update from *Queued* to *Running* and a *Connect to JupyterLab Server* button will appear. Click *Connect to JupyterLab Server*. 
