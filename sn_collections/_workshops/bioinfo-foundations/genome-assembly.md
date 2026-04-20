@@ -32,6 +32,36 @@ In this workshop, participants will learn:
 * How to understand and improve a genome assembly
 * Why genome assembly is often an iterative process, where you start with a draft and repeatedly improve upon it using techniques for scaffolding.  
 
+## Tutorial Setup Instructions 
+
+Steps to prepare for the tutorial session: 
+
+* Log on to [Ceres Open OnDemand](http://ceres-ood.scinet.usda.gov/). For more information on login procedures for web-based SCINet access, see the [SCINet access user guide]({{site.baseurl}}/guides/access/web-based-login).
+* Open a command-line session by clicking on “Clusters” -> “Ceres Shell Access” on the top menu. This will open a new tab with a command-line session on Ceres’ login node.
+* Create a workshop working directory by running the following commands. Note: you do not have to edit the commands with your username as it will be determined by the $USER variable.
+
+  ```bash 
+  mkdir -p /90daydata/shared/$USER/genome_assembly
+  cd /90daydata/shared/$USER/genome_assembly
+  cp -r /project/scinet_workshop2/foundations_bioinf_2026/genome_assembly/* .
+  ```
+  {:.copy-code}
+
+* Launch VS Code:
+  * Under the Interactive Apps menu, select VS Code
+  * Specify the following input values on the page:
+    * Account: scinet_workshop2
+    * Queue: ceres
+    * QoS: 400thread
+    * Number of cores: 16
+    * Memory required: 64 G
+    * Number of hours: 5
+    * Optional Slurm Parameters: --reservation=foundations_workshop
+    * Working Directory:  /90daydata/shared/$USER/genome_assembly
+  * Click Launch. The screen will update to the *Interactive Sessions* page. When your VS Code session is ready, the top card will update from *Queued* to *Running* and a *Connect to VS Code* button will appear. Click *Connect to VS Code.*
+
+
+
 
 
 ## Sequencing Technologies, QC, and Profiling
@@ -69,7 +99,7 @@ module load miniconda
 source activate /project/scinet_workshop2/Bioinformatics_series/nanoplot_conda/NP/ 
 mkdir -p 04_NanoPlotQC
 
-time NanoPlot --fastq 01_Data/mapped_reads.chr2.filtlong.fastq.gz-o 04_NanoPlotQC --threads 8
+time NanoPlot --fastq 01_Data/mapped_reads.chr2.filtlong.fastq.gz -o 04_NanoPlotQC --threads 8
 ```
 
 *Expected time: ~1m31s*
@@ -100,7 +130,7 @@ time jellyfish count -m 21 -s 100M -t 8 \
 ```
 - `-m 21`: 21-mers
 - `-s 100M`: Hash size for estimating expected unique k-mers
-- `-t 20`: 20 threads
+- `-t 8`: 8 threads
 
 *Expected time: ~24s*
 
@@ -116,6 +146,26 @@ Interpret the visual reports carefully. Key points include:
 - What is the estimated total Genome Size? 
 - What is the total estimated Unique Sequence (%)?
 
+Common Elements in Both Figures
+
+* Genome Size (len): Estimated genome size is 21,873,679 bp (~21 Mb).
+* Unique Sequence (uniq): 82.8% of the genome is unique sequence.
+* Heterozygosity (het): The heterozygosity rate is 0.0829%, indicating a very low level of heterozygosity.
+* Coverage (kcov): Average k-mer coverage is 29.6.
+* Error Rate (err): Estimated sequencing error rate is 0.38%.
+* Duplication (dup): 1.51% of the genome is duplicated.
+* k-mer size (k): k-mer length used for the analysis is 21.
+
+Key Elements in the Plots
+
+* X-Axis (Coverage): Represents the k-mer coverage. In the linear plot, it is shown on a linear scale, whereas in the logarithmic plot, it is shown on a logarithmic scale.
+* Y-Axis (Frequency): Represents the frequency of k-mers at different coverage levels.
+* Blue Bars (observed): Histogram of observed k-mer frequencies.
+* Black Line (full model): Model fit to the observed k-mer frequencies.
+* Yellow Line (unique sequence): Contribution of unique sequences to the k-mer frequencies.
+* Orange Line (errors): Contribution of sequencing errors to the k-mer frequencies.
+* Dashed Lines (kmer-peaks): Peaks corresponding to k-mer coverage of unique and repetitive sequences.
+* Red Dashed Line (cov-threshold): A threshold to distinguish high-coverage k-mers, typically used to identify potential contaminant sequences or highly repetitive regions. This is set at a very high coverage level (around 1000).
 </li>
 <li class="usa-process-list__item" markdown=1>
 
@@ -161,10 +211,6 @@ awk '/^S/ { print ">"$2; print $3 }' 06_Assembly/chr2_hifi.asm.bp.p_ctg.gfa > 06
 # Counting the number of raw contigs generated
 grep ">" -c 06_Assembly/chr2_hifi.asm.bp.p_ctg.fa
 ```
-
-*(Additional Exercise: If you ran parallel ONT workflows, parse through your generated `Flye` output files for comparison).*
-
-We recommend visualizing the raw `.gfa` file locally using [Bandage](https://rrwick.github.io/Bandage/) if you would like to explore telomere loops and structural bubbles visually.
 
 #### Assembly Statistics
 
@@ -244,7 +290,7 @@ module load merqury
 mkdir -p 09_Merqury_Output_HiFi && cd 09_Merqury_Output_HiFi
 
 # Step 1: Count K-mers from raw reads again (k=17 optimal for 19Mb genome)
-time meryl k=17 count output ../08_AT_HiFi.meryl ../01_Data/AT_HiFi_chr2.fastq.gz
+time meryl k=17 count output ../08_AT_HiFi.meryl ../01_Data/mapped_reads.chr2.filtlong.fastq.gz
 
 # Step 2: Compare to the assembly FASTA
 merqury.sh ../08_AT_HiFi.meryl \
