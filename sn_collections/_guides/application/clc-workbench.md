@@ -48,11 +48,27 @@ Step 1: Access Open OnDemand:
 Step 2: Launch CLC Genomics Workbench via Open OnDemand:
 
 * Return to the Open OnDemand dashboard and click on the "Interactive Apps" section.
- ![OpenOnDemand1]({{ images_path }}/clc/clc-ood1.jpg)
+  ![OpenOnDemand1]({{ images_path }}/clc/clc-ood1.jpg)
 
 * Look for the "CLC Genomics Workbench" app and click on it to launch the Workbench.
 
-Step 3: Connecting to CLC Server:
+Step 3: Activating QDI License:
+
+* Due to changes being made to [CLC Licensing](https://digitalinsights.qiagen.com/licensing/), we are using “User account-based license access (QDI licensing)”. 
+
+* This involves us adding each user via their QDI Admin Tool, please check for email with the subject “Welcome to CLC Genomics Workbench!” 
+
+* You need to login/set your password on their portal
+
+* Once you have activated your account - access CLC Workbench via [Ceres On Demand](https://ceres-ondemand.scinet.usda.gov/) and select “26-QDI” as the version
+
+* Upon launching CLC Workbench for the first time, users will be greeted with a “License Assistant” window. Select “Use QDI Licensing” and Click “Finish”. It will open a browser window and prompt for Email and Password that you created in the previous step. Upon successful authentication, it should return you to the CLC Workbench app. 
+
+  ![QDI Selection]({{ images_path }}/clc/CLC-QDI-selection.jpg)
+
+* This needs to be done only once - subsequent app launches should automatically register your usage.
+
+Step 4: Connecting to CLC Server:
 
 * After launching CLC Genomics Workbench, you will see the main interface with various tools and functionalities.
   ![Connections]({{ images_path }}/clc/clc-ood2.jpg)
@@ -78,7 +94,7 @@ Step 3: Connecting to CLC Server:
 
 4.	Log in.
 
-![screenshot of CLC Genomics Workbench 22.0.2 software homescreen]({{ images_path }}/clc/CLC2.png)
+  ![screenshot of CLC Genomics Workbench 22.0.2 software homescreen]({{ images_path }}/clc/CLC2.png)
 
 After successful login, you should see a directory CLC-\<your project> in the top left window.
 
