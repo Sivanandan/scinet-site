@@ -19,6 +19,65 @@ archive-label: SCINet Corner Recordings
 
 sessions:
   - session:
+    title: SCINet working groups overview
+    date: 2026-03-26
+    time: 1-2 pm ET
+    excerpt: Learn more about our working groups!
+    details: 
+      - text: <b>Animal Behavior AI Working Group</b> - John Park  
+      - text: <b>Geospatial Research Working Group</b> - Amy Hudson and Heather Savoy
+      - text: <b>Protein Function and Phenotype Prediction Working Group</b> - Hye-Seon Kim and Carson Andorf
+      - text: <b>Translational Omics Working Group</b> - George Liu and Wenli Li
+  - session:
+    title: SCINet lightning talks
+    date: 2026-02-26
+    time: 1-2 pm ET 
+    excerpt: "Learn more about what SCINet/AI-COE fellows are working on!"
+    details: 
+      - text: <b>Modeling environmental determinants of subsistence plant harvests in Alaska</b> - Sire Kassama, Ph.D  
+      - text: <b>Deciphering the gene networks underlying resistance and susceptibility in Nile tilapia</b> - John Konvalina, Ph.D  
+      - text: "<b>Towards precision pest monitoring: Integrated AI approaches for differentiating pest and non-pest weevils</b> - Adama Tukuli, Ph.D"
+      - text: <b>Engineering agricultural products by molecular modeling and simulation</b> - Austin Weigle, Ph.D
+  - session:
+    title: Introduction to SCINet
+    date: 2026-01-22
+    time: 1-2 pm ET
+    excerpt: An overview of SCINet and the computing and training resources we offer.
+    url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/IQAx59GqUts8QoAND9aTP3zxASkfnZ-jTACy8DzeFprXDmU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=PQqf65
+    materials:
+      - text: Session recording
+        url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/IQAx59GqUts8QoAND9aTP3zxASkfnZ-jTACy8DzeFprXDmU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=PQqf65
+  - session:
+    title: Open Q&A
+    date: 2025-12-04
+    time: 1-2 pm ET
+    excerpt: The SCINet Corner is a recurring virtual gathering to provide a space for people to meet and discuss SCINet-related items.
+  - session:
+    title: August SCINet Corner
+    date: 2025-08-28
+    time: 1-2 pm ET
+    excerpt: "Introduction to SCINet's Galaxy interface, a web-based platform for data-intensive bioinformatics analyses."
+  - session:
+    title: July SCINet Corner
+    date: 2025-07-31
+    time: 1-2 pm ET
+  - session:
+    title: Filesystem permissions
+    date: 2025-06-26
+    time: 1-2 pm ET
+    materials:
+      - text: Session Recording
+        url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/EYNGI12GDtRLuAiaPMwBJ9MBXMY66qREM4MpbIykJB1p-Q?e=SQNDEh
+    excerpt: "* Understanding permission classes: user, group, world/others.
+
+* Viewing and interpreting file permissions on the command line.
+
+* Exploring default permissions for new files.
+
+* Using *chmod* to modify and set file permissions. 
+
+* Setting file permissions for different project management scenarios."
+  - session:
     title: "Commonly used Slurm parameters and the new “ceres” partition"
     date: 2025-05-22
     time: 1-2 pm ET
@@ -32,6 +91,9 @@ sessions:
     date: 2025-03-27
     time: 1-2 pm ET
     excerpt: "We invite you to submit any SCINet-related questions, challenges or concerns you'd like us to address in this SCINet Corner by [filling out this short form.](https://forms.office.com/g/kMbsQNssMH)"
+    materials:
+      - text: Session Recording
+        url: https://usdagcc.sharepoint.com/:v:/s/REE-ARS-SCINetOffice/EYVutR0iIFFGvFMjG_cHJHABCg_pbx7wkBMIJx-KXQ-kFg?e=HRpec2
   - session:
     title: Data transfer using Globus
     date: 2025-02-27

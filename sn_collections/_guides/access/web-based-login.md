@@ -21,8 +21,7 @@ GUIs:
     url: /guides/application/galaxy
     internal: true
   - title: Globus Online
-    url: /guides/data/datatransfer#globus-data-transfer
-    excerpt: "Globus Online is the recommended method for transferring data to or among Ceres, Atlas, and Juno. It provides faster data transfer speeds compared to scp, has a graphical interface, and does not require authentication for every file transfer. To transfer data to or from a local computer, users will need to install Globus Connect Personal which does NOT require admin privileges."
+    url: /guides/data/transfer/globus
     internal: true
 
 subnav:
@@ -45,16 +44,16 @@ SCINet offers three main web-based interfaces:
       <ul>
         <li>Open OnDemand
           <ul>
-            <li><a href='http://ceres-ood.scinet.usda.gov/' target='_blank' class=' usa-link--external' rel='noreferrer'>Open OnDemand for Ceres</a></li>
-            <li><a href='https://atlas-ood.hpc.msstate.edu/' target='_blank' class=' usa-link--external' rel='noreferrer'>Open OnDemand for Atlas</a></li>
+            <li><a href='http://ceres-ood.scinet.usda.gov/' target='_blank' class=' usa-link--external' rel='noopener noreferrer'>Open OnDemand for Ceres</a></li>
+            <li><a href='https://atlas-ood.hpc.msstate.edu/' target='_blank' class=' usa-link--external' rel='noopener noreferrer'>Open OnDemand for Atlas</a></li>
           </ul>
         </li>
         <li>Galaxy
           <ul>
-            <li><a href='https://galaxy.scinet.usda.gov' target='_blank' class=' usa-link--external' rel='noreferrer'>Galaxy for Ceres</a></li>
+            <li><a href='https://galaxy.scinet.usda.gov' target='_blank' class=' usa-link--external' rel='noopener noreferrer'>Galaxy for Ceres</a></li>
           </ul>
         </li>
-        <li><a href='https://www.globus.org/' target='_blank' class=' usa-link--external' rel='noreferrer'>Globus</a> (for file transfers)</li>
+        <li><a href='https://www.globus.org/' target='_blank' class=' usa-link--external' rel='noopener noreferrer'>Globus</a> (for file transfers)</li>
       </ul>
 </div>
 

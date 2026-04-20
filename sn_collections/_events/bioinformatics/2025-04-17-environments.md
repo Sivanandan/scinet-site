@@ -89,7 +89,7 @@ srun --reservation=wk1_workshop -A scinet_workshop2 -t 05:00:00 -N1 -n4 --mem 8G
 ```
 
 * **90daydata**:  
-  This is where you made your folder and work from today. This space has unlimited dtorage, but files will be removed in 90 days.
+  This is where you made your folder and work from today.
 
     {:.copy-code}
     ```
@@ -120,7 +120,7 @@ You can ask the shell to print a character
 {:.copy-code}
 ```
 echo "How are you?"
-# The quotes above aren't strictly needed but it is safer with quotes.
+# the quotes above aren't strictly needed but it is safer with quotes
 ```
 
 Date time calendar:
@@ -149,7 +149,7 @@ whoami
 # $USER (your first name.last name)
 
 who
-# All logged-in users in current node.
+# All logged-in users
 ```
 
 **Demo**: Navigate to a directory, view files.
@@ -165,10 +165,10 @@ pwd
 # go one directory "above" day2
 cd ..
 # come back to day2 by using full path or relative path
-cd /90daydata/shared/$USER/intro_bioinformatics/day2 # Full path
-cd day2 # Relative Path
+cd /90daydata/shared/$USER/intro_bioinformatics/day2 # FULL path
+cd day2
 
-# Go Home 
+# go home 
 
 cd ~ # tilde the shortcut to go home
 cd /home/$USER # the full path
@@ -249,7 +249,7 @@ tail -5 Arabidopsis.gtf  # View last 5 lines
 
 
 ### 3. GTF Files in Bioinformatics
-A GTF (Gene Transfer Format) is a tab delimited text file. It describes genes and other features, exons, CDS etc. GTF (Gene Transfer Format) files are essential for describing gene and transcript structures in genome annotation. Here are some of the most common uses:
+A GTF (Gene Transfer Format) is a tab delimited text file. It describes genes and other features, exons, CDS etc.bGTF (Gene Transfer Format) files are essential for describing gene and transcript structures in genome annotation. Below are the most common uses:
 
 {% include table content="| Use Case | Description |
 |----------|-------------|

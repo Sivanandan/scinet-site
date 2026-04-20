@@ -6,10 +6,13 @@ author: Kerrie Geil
 layout: page
 alt_nav: About
 
+
+redirect_from: 
+  - /contact/
 ---
 
 
-Email [scinet_vrsc@USDA.GOV](mailto:scinet_vrsc@USDA.GOV) for:
+Email [scinet_vrsc@usda.gov](mailto:scinet_vrsc@usda.gov) for:
 * questions or feedback about this website
 * questions about the SCINet newsletter or to contribute content
 * technical assistance with your SCINet account

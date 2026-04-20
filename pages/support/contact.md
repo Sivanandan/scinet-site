@@ -8,11 +8,12 @@ subnav:
   - title: How and When to Contact the VRSC
     url: '#how-and-when-to-contact-the-vrsc'
 
-
+redirect_from: 
+  - /support/
 
 ---
 
-The Virtual Research Support Core (VRSC) is a team of Iowa State University and ARS personnel who manage the maintenance and operation of the Ceres HPC system and provide user support. See the [Virtual Research Support Core page]({{ site.baseurl }}/about/vrsc) for more details.
+The Virtual Research Support Core (VRSC) is a team of Iowa State University, Mississippi State University, and ARS personnel who manage the maintenance and operation of the SCINet HPC systems and provide user support. See the [Virtual Research Support Core page]({{ site.baseurl }}/about/vrsc) for more details.
 
 ## How and When to Contact the VRSC
 

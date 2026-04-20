@@ -31,7 +31,7 @@ subnav:
 
 
 
-[Conda](https://conda.io/) is a software package manager for data science that allows unprivileged (non-administrative) Linux or MacOS users to search, fetch, install, upgrade, use, and manage supported open-source software packages and programming languages/libraries/environments (primarily Python and R, but also others such as Perl, Java, and Julia) in a directory they have write access to. Conda allows SCINet users to create reproducible scientific software environments (including outside of Ceres) without requiring the submission of a SCINet software request form for new software, or contacting the VRSC to upgrade existing software.
+[Conda](https://conda.io/) is a software package manager for data science that allows unprivileged (non-administrative) users to search, fetch, install, upgrade, use, and manage supported open-source software packages and programming languages/libraries/environments (primarily Python and R, but also others such as Perl, Java, and Julia) in a directory they have write access to. Conda allows SCINet users to create reproducible scientific software environments (including outside of Ceres) without requiring the submission of a SCINet software request form for new software, or contacting the VRSC to upgrade existing software.
 <!--excerpt-->
 
 Many open-source scientific software packages are available:
@@ -145,7 +145,7 @@ $ conda init &lt;SHELL_NAME&gt;
 
       <code>conda deactivate</code> may still be used safely.
       <p />
-      We will continue to monitor the <a href="https://github.com/conda/conda/issues/7980" target="_blank">GitHub issue</a> that describes the problem and other workarounds.
+      We will continue to monitor the <a href="https://github.com/conda/conda/issues/7980" target="_blank" rel='noopener noreferrer'>GitHub issue</a> that describes the problem and other workarounds.
     </div>
   </div>
 </div>
@@ -156,7 +156,7 @@ $ conda init &lt;SHELL_NAME&gt;
       <h3 class="usa-alert-heading" id="alert-heading"><code>conda activate</code> after <code>source activate</code></h3>
       <div class="usa-alert-title">
         <p>
-          If <code>conda activate</code> is needed for some advanced use cases like <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#nested-activation" target="_blank">nested ("stacked") environments</a>, it can be used after <code>source activate</code>:
+          If <code>conda activate</code> is needed for some advanced use cases like <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#nested-activation" target="_blank" rel='noopener noreferrer'>nested ("stacked") environments</a>, it can be used after <code>source activate</code>:
           <pre>
 [user.name@ceres19-compute-0 ~]$ ml miniconda
 [user.name@ceres19-compute-0 ~]$ source activate

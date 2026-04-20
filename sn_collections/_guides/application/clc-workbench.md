@@ -2,7 +2,7 @@
 title: CLC Genomics Workbench
 description: Using CLC Server
 ## author: VRSC
-excerpt: "Before You Begin, email scinet_vrsc@USDA.GOV so that the admins can setup the import/export directories and permissions for access."
+excerpt: "Before You Begin, email scinet_vrsc@usda.gov so that the admins can setup the import/export directories and permissions for access."
 
 redirect_from: 
   - /guides/analysis/clc-workbench
@@ -31,7 +31,7 @@ subnav:
 
 ## Before You Begin
 
-Email [scinet_vrsc@USDA.GOV](mailto:scinet_vrsc@USDA.GOV?subject=CLC%20setup) so that the admins can setup the import/export directories and permissions for access.
+Email [scinet_vrsc@usda.gov](mailto:scinet_vrsc@usda.gov?subject=CLC%20setup) so that the admins can setup the import/export directories and permissions for access.
 
 We need the following information:
 1.	Path to your project directory.
@@ -69,17 +69,12 @@ Step 3: Connecting to CLC Server:
 1.	File -> Connections -> CLC Server Connection
 2.	Server Name and Port
 	
-  * **If connecting via Ceres Open On Demand**
-```
-Server name: 10.1.9.210
-Server port: 7777
-```
-  * **If connecting from elsewhere**
-```
-Server host: 199.245.99.12
-Server port: 7777
-```
-3.	Username and Password(GA code not required) 
+	```
+	Server name: galaxy.scinet.usda.gov
+	Server port: 60000
+	```
+
+3.	Username and Password
 
 4.	Log in.
 
@@ -100,6 +95,7 @@ Scinet Forum has a discussion group for CLC users at https://forum.scinet.usda.g
 ## Current Licenses on Ceres
 
 CLC Workbench - 3
+
 CLC Grid - 4
 
 If the license requests exceed the number of seats -  CLC Workbench will open in read-only mode - The CLC Grid waits for existing jobs to complete and then launches your job. 

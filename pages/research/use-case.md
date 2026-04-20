@@ -1,6 +1,7 @@
 ---
 title: SCINet Use Cases
-description: Examples of SCINet use cases
+description: Explore SCINet use cases and how it speeds research, solves complex problems, and drives scientific discovery. 
+
 permalink: /research/uses/
 author: 
 layout: page
@@ -22,4 +23,6 @@ subnav:
     internal: link
     
 ---
+
+Explore SCINet use cases and how it speeds research, solves complex problems, and drives scientific discovery. 
 

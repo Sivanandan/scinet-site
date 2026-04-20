@@ -8,17 +8,25 @@ description: Reoccuring Translational Omics Working Group webinars and presentat
 provider: Omics Working Group
 registration: 
   text: "Join the Working Group"
-  url: https://forms.office.com/g/a7VFhG0AJD
+  url: https://forms.cloud.microsoft/pages/responsepage.aspx?id=5zZb7e4BvE6GfuA8-g1Gl2dRt5mRqe5GsSYTIQRNE7xUQkE2VlE4Vk9RQTkzU1I3MzlXWUlURzdGWC4u
 cal-titles: excerpt
 maincalendar: true
 
-excerpt: To recieve an invitation to upcoming webinars, fill out the [Translational Omics Working Group registration survey](https://forms.office.com/g/a7VFhG0AJD).
+excerpt: To receive an invitation to upcoming webinars, fill out the [Translational Omics Working Group registration survey]([https://forms.office.com/g/a7VFhG0AJD](https://forms.cloud.microsoft/pages/responsepage.aspx?id=5zZb7e4BvE6GfuA8-g1Gl2dRt5mRqe5GsSYTIQRNE7xUQkE2VlE4Vk9RQTkzU1I3MzlXWUlURzdGWC4u)).
 
 #filter-archive: materials
 
 archive-label: Webinar Recordings
 
 sessions:
+  - session:
+    title: Detection of interactions between biomolecules with novel sequencing based tools
+    date: 2025-06-12
+    time: 1-2pm ET
+    presenter: Dr. Alon Goren
+    materials:
+      - text: webinar recording
+        url: https://usdagcc-my.sharepoint.com/:v:/r/personal/george_liu_usda_gov/Documents/publication/Hu%20Zhenbin/TOmics%20WG/20250612Recording/GMT20250612-170142_Recording_2560x1440.mp4?csf=1&web=1
   - session:
     title: Improving Production Traits in Poultry through Genome Editing
     date: 2025-05-08
@@ -166,7 +174,7 @@ sessions:
 
 ---
 
-To recieve an invitation to upcoming webinars, fill out the [Translational Omics Working Group registration survey](https://forms.office.com/g/a7VFhG0AJD).
+To receive an invitation to upcoming webinars, fill out the [Translational Omics Working Group registration survey](https://forms.cloud.microsoft/pages/responsepage.aspx?id=5zZb7e4BvE6GfuA8-g1Gl2dRt5mRqe5GsSYTIQRNE7xUQkE2VlE4Vk9RQTkzU1I3MzlXWUlURzdGWC4u).
 
 The primary goal of the [Translational Omics Working Group](/research/working-groups/omics) is to foster collaboration, knowledge-sharing, and innovation among researchers and experts in diverse fields, including but not limited to genomics, bioinformatics, computational biology, and artificial intelligence (AI).
 
