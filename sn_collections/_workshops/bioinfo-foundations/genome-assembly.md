@@ -56,10 +56,20 @@ Steps to prepare for the tutorial session:
     * Number of cores: 16
     * Memory required: 64 G
     * Number of hours: 5
-    * Optional Slurm Parameters: --reservation=foundations_workshop
-    * Working Directory:  /90daydata/shared/$USER/genome_assembly
+    * Optional Slurm Parameters: `--reservation=foundations_workshop`
+    * Working Directory:  `/90daydata/shared/$USER/genome_assembly`
   * Click Launch. The screen will update to the *Interactive Sessions* page. When your VS Code session is ready, the top card will update from *Queued* to *Running* and a *Connect to VS Code* button will appear. Click *Connect to VS Code.*
-
+* Launch the Desktop on Ceres:
+  * Under the Interactive Apps menu, select Desktop
+  * Specify the following input values on the page:
+    * Account: scinet_workshop2
+    * Queue: ceres
+    * QoS: 400thread
+    * Number of cores: 2
+    * Memory required: 4G
+    * Number of hours: 5
+    * Optional Slurm Parameters
+  * Click Launch. The screen will update to the *Interactive Sessions* page. When your interactive Desktop session is ready, the top card will update from *Queued* to *Running* and a *Launch Desktop* button will appear. Click *Launch Desktop.*
 
 
 
@@ -464,35 +474,6 @@ This generates your final `FINAL.fasta` containing 100bp structural gaps represe
 HiCGenome.FINAL.fasta -- final fasta assembly with gaps added
 HiCGenome.final.hic -- final .hic file that you can load into Juicebox for viewing the contact map
 HiCGenome.FINAL.assembly -- final .assembly that you can load into Juicebox to view your scaffolding on the contact map.
-
-
-
-#### F. Gene Space Completeness Evaluation
-
-To prove your assembly represents biological truth, we test for the presence of widespread, conserved orthologs (`BUSCO/compleasm` and OMArk). 
-
-* Evaluating with `compleasm`  
-  We compare the final sequence against a specific lineage database (e.g. `embryophyta_odb12`).
-
-  ```bash
-  # Set module paths depending on cluster setup. 
-  # Below paths assume local /project installation logic for the workshop
-  software=/project/gif_vrsc_workshop/software/
-
-  time $software/compleasm_kit/compleasm.py run -t 20 \
-    -l eukaryota -L 01_Data/busco_downloads/lineages/embryophyta_odb10/ \
-    -a FINAL.fasta -o 11_Compleasm 
-  ```
-  {:.copy-code}
-
-**Understanding the output line:** `S:90.59%, 231 | D:9.41%, 24 | F:0.00%, 0 | M:0.00%, 0`
-- `S`: Single-copy complete (the ideal goal)
-- `D`: Duplicated (indicates uncollapsed heterozygosity if higher than typical ploidy)
-- `F`: Fragmented (misassembled or low depth)
-- `M`: Missing
-
-#### Advanced Assessment with `OMArk`
-While `BUSCO\compleasm` uses single-copy assumptions, `OMArk` leverages broader clade-specific databases (OMA) to evaluate the completeness of *any* gene model without penalizing biologically valid duplications typical in plant genomes. It identifies "alien" or fragmented genes via read mapping coverage correlation.
 
 </li>
 <li class="usa-process-list__item" markdown=1>
