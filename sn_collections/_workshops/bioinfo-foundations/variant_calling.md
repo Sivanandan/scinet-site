@@ -89,6 +89,7 @@ You are encouraged to run the commands yourself during or after the workshop.
 ---
 
 #### Directory Structure
+When you copy the files, you will have three folders, `playground`, `real` and `demo`. For a quick learning experience, we recommend checking out `playground`. The code blocks in the tutorial are for the single sample in the `playground` folder. Its organized as shown below:
 
 ```
 playground/
